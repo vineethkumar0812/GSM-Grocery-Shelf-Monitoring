@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    /* Add custom styles here */
+    body {
+        background-image: url('https://miro.medium.com/v2/resize:fit:1400/1*6mGAP8Y2WHyzAnQHuhcDvQ.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        /* Black background with opacity */
+        z-index: -1;
+        /* Ensure the overlay is behind content */
+    }
+
+    .container {
+        position: relative;
+        z-index: 1; /* Ensure content is above the overlay */
+    }
+</style>
+<div class="overlay"></div>
+<div class="container my-2">
+    <div class="content-wrapper">
+        <!-- Section: Introduction -->
+        <section class="mb-2">
+            <h2 class="h1-responsive font-weight-bold text-center my-5 text-white">Transforming Retail with Real-Time
+                Grocery Shelf Monitoring</h2>
+            <p class="lead grey-text text-center w-responsive mx-auto mb-5 text-white">Our platform leverages
+                cutting-edge object detection technology to automate grocery shelf monitoring, ensuring efficient
+                inventory management and optimized restocking processes for retailers of all sizes.</p>
+            <div class="row">
+
+                <!-- Card: Automated Shelf Monitoring -->
+                <div class="col-md-4 mb-4">
+                    <div class="card card-cascade narrower">
+                        <div class="view view-cascade overlay">
+                            <img class="card-img-top" src="https://example.com/shelf-monitoring.jpg"
+                                alt="Automated Shelf Monitoring">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-body card-body-cascade">
+                            <h5 class="pink-text pb-2 pt-1"><i class="fas fa-search"></i> Automated Shelf Monitoring
+                            </h5>
+                            <h4 class="font-weight-bold card-title">Real-Time Item Detection</h4>
+                            <p class="card-text">Automatically detect and quantify grocery items on shelves using YOLO
+                                and SSD object detection models, ensuring up-to-date inventory data.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card: Inventory Insights -->
+                <div class="col-md-4 mb-4">
+                    <div class="card card-cascade narrower">
+                        <div class="view view-cascade overlay">
+                            <img class="card-img-top" src="https://example.com/inventory-insights.jpg"
+                                alt="Inventory Insights">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-body card-body-cascade">
+                            <h5 class="blue-text pb-2 pt-1"><i class="fas fa-chart-bar"></i> Inventory Insights</h5>
+                            <h4 class="font-weight-bold card-title">Actionable Data</h4>
+                            <p class="card-text">Gain valuable insights into inventory turnover and customer demand,
+                                helping retailers make informed decisions about restocking and product placement.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card: Operational Efficiency -->
+                <div class="col-md-4 mb-4">
+                    <div class="card card-cascade narrower">
+                        <div class="view view-cascade overlay">
+                            <img class="card-img-top" src="https://example.com/operational-efficiency.jpg"
+                                alt="Operational Efficiency">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-body card-body-cascade">
+                            <h5 class="green-text pb-2 pt-1"><i class="fas fa-cogs"></i> Operational Efficiency</h5>
+                            <h4 class="font-weight-bold card-title">Streamlined Restocking</h4>
+                            <p class="card-text">Reduce out-of-stock scenarios and optimize restocking processes with
+                                real-time data, ensuring smooth operations for both small and large retail environments.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Customer Reviews -->
+        <section class="text-center">
+            <h2 class="h1-responsive font-weight-bold text-center my-3 text-white">Retailer Feedback</h2>
+            <div class="row">
+                <!-- Review Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card card-cascade">
+                        <div class="card-body card-body-cascade text-center">
+                            <h4 class="card-title"><strong>Sarah Lee</strong></h4>
+                            <h5 class="blue-text pb-2"><strong>⭐⭐⭐⭐⭐</strong></h5>
+                            <p class="card-text">"The automated shelf monitoring system has significantly improved our
+                                stock management. It's a game-changer for operational efficiency!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card card-cascade">
+                        <div class="card-body card-body-cascade text-center">
+                            <h4 class="card-title"><strong>Michael Brown</strong></h4>
+                            <h5 class="blue-text pb-2"><strong>⭐⭐⭐⭐⭐</strong></h5>
+                            <p class="card-text">"The inventory insights have allowed us to better predict customer
+                                demand and optimize our product placement."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card card-cascade">
+                        <div class="card-body card-body-cascade text-center">
+                            <h4 class="card-title"><strong>Linda Wong</strong></h4>
+                            <h5 class="blue-text pb-2"><strong>⭐⭐⭐⭐</strong></h5>
+                            <p class="card-text">"Our store has seen fewer out-of-stock situations and faster restocking
+                                thanks to the real-time data from this system."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- Script for JS animations -->
+<script>
+    // Animation script adjusted for the new content
+    document.addEventListener("DOMContentLoaded", () => {
+        const scrollItems = document.querySelectorAll('.card-cascade');
+
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+
+            return (
+                elementTop <=
+                (window.innerHeight || document.documentElement.clientHeight) / dividend
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add('animated', 'fadeInUp');
+        };
+
+        const handleScrollAnimation = () => {
+            scrollItems.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                }
+            })
+        }
+
+        window.addEventListener('scroll', () => {
+            handleScrollAnimation();
+        });
+    });
+</script>
+{% endblock %}
